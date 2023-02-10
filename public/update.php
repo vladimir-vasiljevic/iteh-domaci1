@@ -9,7 +9,7 @@
     if (isset($_POST['edit_employer'])) {
         if (Employer::update($mysqli, $_POST['id'], $_POST['first_name'], $_POST['last_name'], strtolower($_POST['mail']), $_POST['employer_position'])) {
             echo "<script>
-                    alert('Employer\'s information successfully updated.);
+                    alert('Employee\'s information successfully updated.);
                     window.location.replace('read.php');
                     </script>";
         } else {
@@ -19,7 +19,7 @@
 ?>
 
 <?php
-    $title = "Update Employer Information";
+    $title = "Uredite informacije o zaposlenom";
     include("parts/header.php");
 ?>
 

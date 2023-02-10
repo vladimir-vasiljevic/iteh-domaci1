@@ -15,7 +15,7 @@
 ?>
 
 <?php
-    $title = "Insert New Employer";
+    $title = "Unesite novog zaposlenog";
     include("parts/header.php");
 ?>
 

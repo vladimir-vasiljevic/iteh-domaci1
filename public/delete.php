@@ -6,7 +6,7 @@
         $result = Employer::delete($mysqli, $_GET['mail']);
         if ($result)
             echo "<script>
-                    alert('Employer with e-mail: ". $_GET['mail']. " removed.');
+                    alert('Employee with e-mail: ". $_GET['mail']. " removed.');
                     window.location.replace('read.php');
                     </script>";
         else
@@ -15,7 +15,7 @@
 ?>
 
 <?php
-    $title = "Remove Employer";
+    $title = "Obrisati zaposlenog";
     include("parts/header.php");
 ?>
 
