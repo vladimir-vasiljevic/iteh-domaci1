@@ -9,11 +9,11 @@
     if (isset($_POST['edit_employer'])) {
         if (Employer::update($mysqli, $_POST['id'], $_POST['first_name'], $_POST['last_name'], strtolower($_POST['mail']), $_POST['employer_position'])) {
             echo "<script>
-                    alert('Employee\'s information successfully updated.);
+                    alert('Informacije o zaposlenom uspešno ažurirane.);
                     window.location.replace('read.php');
                     </script>";
         } else {
-            echo "<script> alert('Error.');</script>";
+            echo "<script> alert('Greška.');</script>";
         }
     }
 ?>
@@ -29,39 +29,39 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                <button class="btn btn-primary" id="menu-toggle">Dashboard</button>
+                <button class="btn btn-primary" id="menu-toggle">Meni</button>
             </nav>
             <!-- /#page-content-wrapper -->
             <div class="container-fluid">
-                <h1 class="mt-4">Update Employer Information</h1>
+                <h1 class="mt-4">Uredite informacije o zaposlenom</h1>
 
                 <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
                     <form class="form-horizontal" method="GET">
                         <div class="form-group">
-                            <label class="control-label" for="email">Employer's e-mail</label>
+                            <label class="control-label" for="email">E-mail adresa zaposlenog</label>
                             <input id="email" name="email" type="email" placeholder="E-mail" class="form-control input-md">
                             <span id="email_status"></span>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-info" name="find_employer">Find Employer</button>
+                            <button type="submit" class="btn btn-info" name="find_employer">Pronađi</button>
                         </div>
                     </form>
 
                     <form class="form-horizontal" method="POST" style="margin-top: 100px;">
                         <div class="form-group">
-                            <label class="control-label" for="id">Employer's ID</label>
-                            <input id="id" name="id" type="text" placeholder="EMPLOYER ID" class="form-control input-md"
+                            <label class="control-label" for="id">ID</label>
+                            <input id="id" name="id" type="text" placeholder="ID" class="form-control input-md"
                                    value="<?php if(isset($employer[0]->idEmployer)) echo($employer[0]->idEmployer); ?>" readonly>
                         </div>
                         <div class="form-group">
-                            <label class="control-label" for="first_name">First Name</label>
-                            <input id="first_name" name="first_name" type="text" placeholder="First Name" class="form-control input-md"
+                            <label class="control-label" for="first_name">Ime</label>
+                            <input id="first_name" name="first_name" type="text" placeholder="Ime" class="form-control input-md"
                                    value="<?php if(isset($employer[0]->firstName)) echo $employer[0]->firstName; ?>">
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label" for="last_name">Last Name</label>
-                            <input id="last_name" name="last_name" type="text" placeholder="Last Name" class="form-control input-md"
+                            <label class="control-label" for="last_name">Prezime</label>
+                            <input id="last_name" name="last_name" type="text" placeholder="Prezime" class="form-control input-md"
                                    value="<?php if(isset( $employer[0]->lastName)) echo $employer[0]->lastName; ?>">
                         </div>
 
@@ -73,13 +73,13 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label" for="employer_position">Employer Position</label>
+                            <label class="control-label" for="employer_position">Pozicija</label>
                             <select class="form-control" name="employer_position" id="employer_position"></select>
                         </div>
 
                         <br>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-warning" name="edit_employer">Edit Employer</button>
+                            <button type="submit" class="btn btn-warning" name="edit_employer">Izmeni</button>
                         </div>
                     </form>
                 </div>

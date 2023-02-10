@@ -75,11 +75,11 @@ class Employer
         $result = $mysqli->query("SELECT * FROM employer WHERE email='$email '");
         $employers = $this->getEmployer($result);
         if (count($employers) > 0) {
-            echo "<script>alert('Zaposleni sa ovo email adresom već postoji. Molimo pokušajte ponovo.);</script>";
+            echo "<script>alert('Zaposleni sa ovom email adresom već postoji. Molimo pokušajte ponovo.);</script>";
             return false;
         } else {
             $this->create($mysqli, $firstName, $lastName, $email, $idPosition);
-            echo "<script>alert('Employee successfully added');</script>";
+            echo "<script>alert('Zaposleni uspešno dodat.');</script>";
             return true;
         }
     }

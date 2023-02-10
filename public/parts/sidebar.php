@@ -3,10 +3,10 @@
         <div class="sidebar-heading">KOD WLADE</div>
 
         <div class="list-group list-group-flush">
-            <a href="./read.php" class="list-group-item list-group-item-action bg-light">Prikaži sve zaposlene</a>
+            <a href="./read.php" class="list-group-item list-group-item-action bg-light">Prikažite sve zaposlene</a>
             <a href="./create.php" class="list-group-item list-group-item-action bg-light">Unesite novog zaposlenog</a>
             <a href="./update.php" class="list-group-item list-group-item-action bg-light">Uredite informacije o zaposlenom</a>
-            <a href="./delete.php" class="list-group-item list-group-item-action bg-light">Obrisati zaposlenog</a>
+            <a href="./delete.php" class="list-group-item list-group-item-action bg-light">Obrišite zaposlenog</a>
         </div>
 
         <div class="info-wrapper list-group list-group-flush">
